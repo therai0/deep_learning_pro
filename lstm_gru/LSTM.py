@@ -140,6 +140,7 @@ class NextWordPredictionModel:
             model = self.build_model()
 
             train_model = model.fit(X_train,y_train,epochs= 50,validation_data=(X_test,y_test),verbose=1) 
+            model.save("next_word_prediction_model.keras")
             
         except Exception as e:
             print(e)
